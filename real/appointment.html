@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointments</title>
+
+<link rel="stylesheet" href="appointment.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo-container">
+        <img src="CCA_SEAL.png" class="logo-img">
+        <h2>City College of Angeles</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="realhomepage.html">Home</a>
+        <a href="#">About</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                Appointment <i class="fa fa-chevron-down"></i>
+            </button>
+
+            <div class="dropdown-content">
+                <a href="#">Pre appointment</a>
+                <a href="appointment.html">Appointment</a>
+                <a href="#">Reject</a>
+            </div>
+        </div>
+
+        <a href="#">Dashboard</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="#">Schedule</a>
+        <a href="#">Analytics</a>
+    </div>
+</div>
+
+<h2 class="page-title">Appointments</h2>
+
+<div class="controls">
+  <input type="text" id="searchInput" placeholder="Search name, institute, time...">
+  <div class="filter-container">
+    <button id="filterBtn">Filter ▾</button>
+
+    <div id="filterPanel" class="filter-panel" hidden>
+      <label>Date from:</label>
+      <input id="dateFrom" type="date">
+
+      <label>Date to:</label>
+      <input id="dateTo" type="date">
+
+      <label>Institute:</label>
+      <select id="instituteFilter">
+        <option value="all">All</option>
+        <option value="icsls">ICSLS</option>
+      </select>
+
+      <label>Time from:</label>
+      <input id="timeFrom" type="time">
+
+      <label>Time to:</label>
+      <input id="timeTo" type="time">
+
+      <label>Status:</label>
+      <select id="statusFilter">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+      </select>
+
+      <button id="clearFilterBtn">Clear</button>
+    </div>
+  </div>
+</div>
+
+<div class="table-header">
+  <span>Date</span>
+  <span>Name</span>
+  <span>Institute</span>
+  <span>Time</span>
+  <span>Duration</span>
+  <span>Status</span>
+</div>
+
+<div id="appointmentList">
+
+  <h4>March 22, 2026</h4>
+
+  <div class="card" data-date="2026-03-22">
+    <span></span>
+    <span class="name">Teacher 1</span>
+    <span>ICSLS</span>
+    <span>2:00PM - 2:20PM</span>
+    <span>20 Minutes</span>
+    <select class="status">
+      <option>Pending</option>
+      <option>Approved</option>
+    </select>
+  </div>
+
+  <div class="card" data-date="2026-03-22">
+    <span></span>
+    <span class="name">Teacher 2</span>
+    <span>ICSLS</span>
+    <span>2:00PM - 2:20PM</span>
+    <span>20 Minutes</span>
+    <select class="status">
+      <option>Pending</option>
+      <option>Approved</option>
+    </select>
+  </div>
+
+  <h4>March 23, 2026</h4>
+
+  <div class="card" data-date="2026-03-23">
+    <span></span>
+    <span class="name">Teacher 3</span>
+    <span>ICSLS</span>
+    <span>2:00PM - 2:20PM</span>
+    <span>20 Minutes</span>
+    <select class="status">
+      <option>Approved</option>
+      <option>Pending</option>
+    </select>
+  </div>
+
+</div>
+
+<script>
+const filterBtn = document.getElementById("filterBtn");
+const filterPanel = document.getElementById("filterPanel");
+
+filterBtn.onclick = () => {
+  filterPanel.classList.toggle("open");
+};
+</script>
+
+</body>
+</html>

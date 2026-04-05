@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty System</title>
+    <title>Attendance</title>
 
     <link rel="stylesheet" href="realhomepagecss.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="attendance.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- SAME NAVBAR -->
 <div class="navbar">
     <div class="logo-container">
         <img src="CCA_SEAL.png" class="logo-img">
@@ -21,16 +21,15 @@
         <a href="realhomepage.html">Home</a>
         <a href="#">About</a>
 
-        <!-- DROPDOWN -->
         <div class="dropdown">
             <button class="dropbtn">
-                Appointment<i class="fa fa-chevron-down"></i>
+                Appointment <i class="fa fa-chevron-down"></i>
             </button>
 
             <div class="dropdown-content">
-                <a href="#">Pre appointment</a>
+                <a href="#">Pre Appointment</a>
                 <a href="appointment.html">Appointment</a>
-                <a href="#">Reject</a>
+                <a href="#">Rejected</a>
             </div>
         </div>
 
@@ -41,22 +40,27 @@
     </div>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>
-            <span class="highlight">Welcome!</span> Discover Your <br>
-            Potential at City College <br> of Angeles!
-        </h1>
+<!-- CONTENT -->
+<div class="container">
+    <h1>ATTENDANCE</h1>
 
-        <p>
-            The City College of Angeles is an institution of hope and excellence,
-            producing globally competitive professionals with strong values and leadership.
-        </p>
+    <div class="content">
+        <div class="card">
+            <img src="nicopic.jpg" class="profile">
+            <p><strong>Juan Dela Cruz</strong></p>
 
-        <a href="#" class="hero-btn">Learn More</a>
+            <div class="buttons">
+                <button class="time-in">TIME IN</button>
+                <button class="time-out">TIME OUT</button>
+            </div>
+        </div>
+
+        <div class="history">
+            <h3>History</h3>
+            <div class="history-box"></div>
+        </div>
     </div>
-</section>
+</div>
 
 </body>
 </html>
